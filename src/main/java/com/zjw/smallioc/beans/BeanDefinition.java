@@ -8,6 +8,10 @@ public class BeanDefinition {
 
     private String beanClassName;
 
+
+
+    private PropertyValues propertyValues = new PropertyValues();
+
     public void setBean(Object bean) {
         this.bean = bean;
     }
@@ -33,6 +37,18 @@ public class BeanDefinition {
         }
     }
 
+    public BeanDefinition(){
+
+    }
+
+    public PropertyValues getPropertyValues() {
+        return propertyValues;
+    }
+
+    public void setPropertyValues(PropertyValues propertyValues)
+    {
+        this.propertyValues = propertyValues;
+    }
 //    public BeanDefinition(Object bean){
 //        this.bean = bean;
 //    }
